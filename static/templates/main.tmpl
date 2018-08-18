@@ -16,7 +16,17 @@
 <body>
     <div class="page">
         <header class="header">
-            <h3>CMS monitoring</h3>
+			<div class="is-row">
+				<div class="is-col is-10">
+                    <img src="{{.Base}}images/cms_logo.jpg" style="width:50px;height:50px;" />
+                </div>
+				<div class="is-col is-80">
+                    <h3>CMS monitoring</h3>
+                </div>
+				<div class="is-col is-10">
+                    <img src="{{.Base}}images/cern_logo.jpg" style="width:50px;height:50px;" />
+                </div>
+            </div>
         </header>
         <hr/>
         <main class="main">
@@ -85,7 +95,13 @@
 		</main>
 
         <hr/>
-        <footer class="footer">CMS monitoring footer</footer>
+        <footer class="footer">
+            &#169;&nbsp;
+            CMS monitoring conveners:
+            <a href="mailto:vkuznet@gmail.com">Valentin Kuznetsov</a>
+            &
+            <a href="mailto:federica.legger@to.infn.it">Federica Legger</a>
+        </footer>
     </div>
 
 <script>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <title>Basic Template</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="{{.Base}}js/kube.min.js"></script>
+
+    <!-- Kube CSS -->
+    <link rel="stylesheet" href="{{.Base}}css/kube.min.css">
+    <link rel="stylesheet" href="{{.Base}}css/main.css">
+
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h3>CMS monitoring</h3>
+        </header>
+        <hr/>
+        <main class="main">
+
+			<div class="is-row">
+				<div class="is-col is-10"></div>
+				<div class="is-col is-10">
+                    <button class="button is-small is-secondary" data-kube="toggle" data-target="#Dashboards" onclick="loadContent('Dashboards')">
+                        Dashboards
+                    </button>
+                </div>
+				<div class="is-col is-10">
+                    <button class="is-small is-secondary" data-kube="toggle" data-target="#Sources" onclick="loadContent('Sources')">
+                        Sources
+                    </button>
+                </div>
+				<div class="is-col is-10">
+                    <button class="is-small is-secondary" data-kube="toggle" data-target="#Training" onclick="loadContent('Training')">
+                        Training
+                    </button>
+                </div>
+				<div class="is-col is-10">
+                    <button class="is-small is-secondary" data-kube="toggle" data-target="#Shifters" onclick="loadContent('Shifters')">
+                        Shifters
+                    </button>
+                </div>
+				<div class="is-col is-10">
+                    <button class="is-small is-secondary" data-kube="toggle" data-target="#Issues" onclick="loadContent('Issues')">
+                        Issues
+                    </button>
+                </div>
+				<div class="is-col is-10">
+                    <button class="is-small is-secondary" data-kube="toggle" data-target="#Meetings" onclick="loadContent('Meetings')">
+                        Meetings
+                    </button>
+                </div>
+			</div>
+
+            <br/>
+
+            <div class="content is-row">
+                <div class="is-col">
+                    <div id="Dashboards" class="is-hidden">
+                        {{.Dashboards}}
+                    </div>
+                    <div id="Sources" class="is-hidden">
+                        {{.Sources}}
+                    </div>
+                    <div id="Training" class="is-hidden">
+                        {{.Training}}
+                    </div>
+                    <div id="Shifters" class="is-hidden">
+                        {{.Shifters}}
+                    </div>
+                    <div id="Issues" class="is-hidden">
+                        {{.Issues}}
+                    </div>
+                    <div id="Meetings" class="is-hidden">
+                        {{.Meetings}}
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+		</main>
+
+        <hr/>
+        <footer class="footer">CMS monitoring footer</footer>
+    </div>
+
+<script>
+function loadContent(tag) {
+    var tags = ["Dashboards", "Sources", "Training", "Shifters", "Issues", "Meetings"];
+    for(var i=0; i<tags.length; i++) {
+        var id = document.getElementById(tags[i]);
+        id.className = "is-hidden";
+    }
+    var tid = document.getElementById(tag);
+    tid.className="";
+}
+</script>
+
+</body>
+</html>

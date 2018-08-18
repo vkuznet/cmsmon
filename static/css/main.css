@@ -1,0 +1,17 @@
+.content {
+    background-color: rgba(213,213,213, 0.3);
+    resize: both;
+    min-height: 300px;
+    padding: 40px;
+    overflow: auto;
+}
+.header {
+    height: 50px;
+    margin: 16px;
+    text-align: center;
+}
+.footer {
+    height: 50px;
+    margin: 16px;
+    text-align: center;
+}

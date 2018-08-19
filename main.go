@@ -63,7 +63,7 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
 	tmplData["Sources"] = template.HTML(templates.Sources(_tdir, tmplData))
 	tmplData["Training"] = template.HTML(templates.Training(_tdir, tmplData))
 	tmplData["Shifters"] = template.HTML(templates.Shifters(_tdir, tmplData))
-	tmplData["Issues"] = template.HTML(templates.Issues(_tdir, tmplData))
+	tmplData["Contacts"] = template.HTML(templates.Contacts(_tdir, tmplData))
 	tmplData["Meetings"] = template.HTML(templates.Meetings(_tdir, tmplData))
 	page := templates.Main(_tdir, tmplData)
 	w.Write([]byte(page))

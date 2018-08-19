@@ -54,8 +54,8 @@
                     </button>
                 </div>
 				<div class="is-col is-10">
-                    <button id="button-Issues" class="is-small is-secondary" data-kube="toggle" data-target="#Issues" onclick="loadContent('Issues')">
-                        Issues
+                    <button id="button-Contacts" class="is-small is-secondary" data-kube="toggle" data-target="#Contacts" onclick="loadContent('Contacts')">
+                        Contacts
                     </button>
                 </div>
 				<div class="is-col is-10">
@@ -81,8 +81,8 @@
                     <div id="Shifters" class="is-hidden">
                         {{.Shifters}}
                     </div>
-                    <div id="Issues" class="is-hidden">
-                        {{.Issues}}
+                    <div id="Contacts" class="is-hidden">
+                        {{.Contacts}}
                     </div>
                     <div id="Meetings" class="is-hidden">
                         {{.Meetings}}
@@ -98,15 +98,15 @@
         <footer class="footer">
             &#169;&nbsp;
             CMS monitoring conveners:
-            <a href="mailto:vkuznet@gmail.com">Valentin Kuznetsov</a>
+            <a href="https://cmsweb.cern.ch/sitedb/prod/people/valya">Valentin Kuznetsov</a>
             &
-            <a href="mailto:federica.legger@to.infn.it">Federica Legger</a>
+            <a href="https://cmsweb.cern.ch/sitedb/prod/people/leggerf">Federica Legger</a>
         </footer>
     </div>
 
 <script>
 function loadContent(tag) {
-    var tags = ["Dashboards", "Sources", "Training", "Shifters", "Issues", "Meetings"];
+    var tags = ["Dashboards", "Sources", "Training", "Shifters", "Contacts", "Meetings"];
     for(var i=0; i<tags.length; i++) {
         var id = document.getElementById(tags[i]);
         id.className = "is-hidden";

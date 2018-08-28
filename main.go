@@ -60,6 +60,7 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	*/
 	tmplData["Dashboards"] = template.HTML(templates.Dashboards(_tdir, tmplData))
+	tmplData["Activities"] = template.HTML(templates.Activities(_tdir, tmplData))
 	tmplData["Sources"] = template.HTML(templates.Sources(_tdir, tmplData))
 	tmplData["Training"] = template.HTML(templates.Training(_tdir, tmplData))
 	tmplData["Shifters"] = template.HTML(templates.Shifters(_tdir, tmplData))

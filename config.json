@@ -1,6 +1,6 @@
 {
     "base": "",
     "port": 8181,
-    "static": "/Users/vk/Work/Languages/Go/gopath/src/github.com/vkuznet/cmsmon/static",
+    "static": "/Users/admin/Monitoring/cmsmon/static",
     "verbose": 0
 }

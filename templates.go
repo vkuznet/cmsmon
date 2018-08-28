@@ -29,7 +29,7 @@ func parseTmpl(tdir, tmpl string, data interface{}) string {
 
 // CMSTemplates structure
 type CMSTemplates struct {
-	main, dashboards, sources, training, shifters, contacts, meetings string
+	main, dashboards, activities, sources, training, shifters, contacts, meetings string
 }
 
 // Main method for CMSTemplates structure
@@ -48,6 +48,15 @@ func (q CMSTemplates) Dashboards(tdir string, tmplData map[string]interface{}) s
 	}
 	q.dashboards = parseTmpl(_tdir, "dashboards.tmpl", tmplData)
 	return q.dashboards
+}
+
+// Activities method for CMSTemplates structure
+func (q CMSTemplates) Activities(tdir string, tmplData map[string]interface{}) string {
+	if q.activities != "" {
+		return q.activities
+	}
+	q.activities = parseTmpl(_tdir, "activities.tmpl", tmplData)
+	return q.activities
 }
 
 // Sources method for CMSTemplates structure
